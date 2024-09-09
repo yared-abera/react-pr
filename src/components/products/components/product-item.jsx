@@ -1,18 +1,19 @@
 import React from 'react'
-
+import styles from './product-item.module.css'
 
 function  ButtonComponent() {
+  console.log(styles)
   return (
-    <button>Click</button>
+    <button className={styles.buttonStyle} >Click</button>
   )
-}
+} 
 
  
-function ProductItem() {
+function ProductItem( {singleProductItem} ) {
   return (
-     <>
-     <h1>hi</h1> 
-     <ButtonComponent />  
+     <> 
+     <p className={styles.productTitle}> {singleProductItem}</p>
+     <ButtonComponent />   
      </>
   );
 }

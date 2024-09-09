@@ -1,24 +1,24 @@
 import React from 'react'
 import ProductItem from './components/product-item'
-const dummyProductData = 
-[ 'product 1', 
-  'product 2', 
-  'product 3' ];
-    
+import './style.css'
 
-function ProductList() {
-  return (
+
+function ProductList({name,city,listofProducts}) {
+  return ( 
     <div>
-      <h3>ECommerce Project</h3>
+      console.log(name,city);
+      <h3 className="title">ECommerce Project</h3>
         {/* <ProductItem/> */}  
-        <ul id="products">
-        {dummyProductData.map((item,index) => (
-
-          <li key={index}>{item}</li>
-          
+  <h4>
+    Name is {name},he/she is belongs to this city {city}
+  </h4>
+          <ul id="products">
+        {listofProducts.map((item,index) => (
+          <ProductItem  singleProductItem={item} key={index}/>
+           
         ))} 
         
-       </ul>
+       </ul>   
     </div>
   ) 
 }
