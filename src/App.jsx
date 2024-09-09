@@ -1,11 +1,16 @@
-
+import FuncComp from "./components/funcComp";
+import ProductList from "./components/products";
+ 
 
 function App() {
 
   return (
-    <div>
-      <h1>Hello</h1>
-    </div> 
+    <>
+      
+      <h1>Hello</h1> 
+      <ProductList />
+
+    </>   
   ); 
 };
 
