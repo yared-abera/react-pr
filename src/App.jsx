@@ -10,9 +10,9 @@ function App() {
 
   return (
     <>
-      {/* <h1>Hello</h1> 
-      <ProductList name="John" city="London" listofProducts={dummyProductData} /> */}
-      <ClassBasedComponent/> 
+      <h1>Hello</h1> 
+      <ProductList name="John" city="London" listofProducts={dummyProductData} />  
+      {/* <ClassBasedComponent/>  */}
     </>   
   ); 
 };

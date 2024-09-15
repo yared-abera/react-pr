@@ -14,7 +14,7 @@ class ClassBasedComponent extends Component {
     // this.state.showText = !this.state.showText;
 
     //this is recommended  
-    this.setState(
+    this.setState( 
         {
 
             showText: !this.state.showText,  
@@ -48,17 +48,17 @@ class ClassBasedComponent extends Component {
   }
 
   componentDidUpdate(preProps, preState) {
-    console.log("component updated");
-    
+    console.log("preState",preState);
+    console.log("preState.count",preState.count);
+  
     if(
       preState &&
       preState.count !== this.state.count &&
-      this.state.count ===10
-    ){
+      this.state.count ===10 ){
       this.setState(
       {
          ...this.state,
-        changeColorAndFont: !this.state.changeColorAndFont,
+        changeColorAndFont:  true,
       } );
     }
   
@@ -71,7 +71,7 @@ class ClassBasedComponent extends Component {
         <div>
            <h1>Hello am class based component</h1>
            {
-               this.state.showText ?  <p style={{ color:this.state.changeColorAndFont ? "red" : "black"}}>am class based component</p> :null
+               this.state.showText ?  <p style={{ color:this.state.changeColorAndFont ? "red" : "black",fontSize:this.state.changeColorAndFont ? "40px" : null}}>am class based component</p> :null
              }
         <p>this is count : {this.state.count}</p>
           
